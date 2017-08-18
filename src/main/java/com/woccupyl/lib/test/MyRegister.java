@@ -6,7 +6,7 @@ import com.woccupyl.lib.event.Subscribor.Errors;
 
 public class MyRegister {
 	
-	public MyEventBus eventBus;
+	public MyEventBus eventBus=MyEventBus.instance;
 	
 	public void init() {
 		

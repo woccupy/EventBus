@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 
-public class EventContainer {
+public  class EventContainer {
 	
 	private Object locker= new Object();
 	
