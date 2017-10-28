@@ -28,7 +28,7 @@ public class MyRegister {
 		
 		System.out.println("has entered the method 2 !");
 		
-		throw new Exception("jump out of the event!");
+		//throw new Exception("jump out of the event!");
 		
 	}
 
@@ -36,6 +36,12 @@ public class MyRegister {
 	public void onMyEvent(MyEvent event) throws Exception{
 		
 		System.out.println("has entered the method 12!");
+	}
+	
+	@Subscribor(order=12)
+	public void onMyEvent(MyEventTwo event) throws Exception{
+		
+		System.out.println("has entered the myEventTwo!");
 	}
 	
 }

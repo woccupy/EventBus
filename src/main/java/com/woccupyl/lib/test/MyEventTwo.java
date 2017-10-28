@@ -6,6 +6,8 @@ public class MyEventTwo extends MyEvent implements testEvent{
 	public void test() {
 		// TODO Auto-generated method stub
 		
+		
+		
 	}
 
 }

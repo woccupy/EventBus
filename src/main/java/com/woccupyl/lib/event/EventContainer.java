@@ -1,6 +1,7 @@
 package com.woccupyl.lib.event;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -77,6 +78,7 @@ public  class EventContainer {
 		
 		Class<?> clazz=event.getClass();
 		List<Class<?>> classList=EventBusUtils.getAllClasses(clazz);
+		Collections.reverse(classList);
 		
 		Class<?>[] interfaces= clazz.getInterfaces();
 		for(Class<?> item : classList)
