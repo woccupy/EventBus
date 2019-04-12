@@ -2,7 +2,7 @@ package com.woccupyl.lib.event;
 
 import java.lang.reflect.Method;
 
-import com.woccupyl.lib.event.Subscribor.Errors;
+import com.woccupyl.lib.event.Subscriber.Errors;
 
 
 public class EventBus {
@@ -13,7 +13,7 @@ public class EventBus {
 		 Class<?> clazz = instance.getClass();
 		    for (Method method : EventBusUtils.getAnnotatedMethodsNotCached(clazz)) {
 		      Class<?>[] parameterTypes = method.getParameterTypes();
-		      Subscribor annotation= method.getAnnotation(Subscribor.class);
+		      Subscriber annotation= method.getAnnotation(Subscriber.class);
 		      Class<?> eventType = parameterTypes[0];
 		      EventListener listener=new EventListener();
 		      listener.setOrder(annotation.order());

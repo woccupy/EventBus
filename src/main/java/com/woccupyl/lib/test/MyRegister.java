@@ -1,7 +1,7 @@
 package com.woccupyl.lib.test;
 
-import com.woccupyl.lib.event.Subscribor;
-import com.woccupyl.lib.event.Subscribor.Errors;
+import com.woccupyl.lib.event.Subscriber;
+import com.woccupyl.lib.event.Subscriber.Errors;
 
 
 public class MyRegister {
@@ -14,7 +14,7 @@ public class MyRegister {
 	}
 
 	
-	@Subscribor(order=1,condition="testObject!=null && testObject.hasEvent==true || hasName ==false")
+	@Subscriber(order=1,condition="testObject!=null && testObject.hasEvent==true || hasName ==false")
 	public void onMyEvent0(testEvent event) throws Exception{
 		
 		System.out.println("has entered the method 1  !");
@@ -23,7 +23,7 @@ public class MyRegister {
 		
 	}
 	
-	@Subscribor(order=2,error=Errors.Catch)
+	@Subscriber(order=2,error=Errors.Catch)
 	public void onMyEvent1(MyEvent event) throws Exception{
 		
 		System.out.println("has entered the method 2 !");
@@ -32,13 +32,13 @@ public class MyRegister {
 		
 	}
 
-	@Subscribor(order=12)
+	@Subscriber(order=12)
 	public void onMyEvent(MyEvent event) throws Exception{
 		
 		System.out.println("has entered the method 12!");
 	}
 	
-	@Subscribor(order=12)
+	@Subscriber(order=12)
 	public void onMyEvent(MyEventTwo event) throws Exception{
 		
 		System.out.println("has entered the myEventTwo!");

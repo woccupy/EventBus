@@ -25,7 +25,7 @@ public class EventBusUtils {
 		
 		for (Class<?> supertype : classList) {
 			for (Method method : supertype.getDeclaredMethods()) {
-				if (method.isAnnotationPresent(Subscribor.class) && !method.isSynthetic()) {
+				if (method.isAnnotationPresent(Subscriber.class) && !method.isSynthetic()) {
 					Class<?>[] parameterTypes = method.getParameterTypes();
 					if (parameterTypes.length != 1) {
 						// invalid parameters!

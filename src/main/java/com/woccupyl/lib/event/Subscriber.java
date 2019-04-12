@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 
-public @interface Subscribor {
+public @interface Subscriber {
 	
 	public enum Errors{Catch,Throw};
 	
