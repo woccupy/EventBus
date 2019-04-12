@@ -14,7 +14,7 @@ public class MyRegister {
 	}
 
 	
-	@Subscribor(order=1)
+	@Subscribor(order=1,condition="testObject!=null && testObject.hasEvent==true || hasName ==false")
 	public void onMyEvent0(testEvent event) throws Exception{
 		
 		System.out.println("has entered the method 1  !");

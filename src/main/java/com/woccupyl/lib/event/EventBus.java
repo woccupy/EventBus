@@ -19,6 +19,7 @@ public class EventBus {
 		      listener.setOrder(annotation.order());
 		      listener.setInstance(instance);
 		      listener.setMethod(method);
+		      listener.setCondition(annotation.condition());
 		      listener.setThrowException(annotation.error()==Errors.Throw);
 		      eventContainer.addEvent(eventType, listener);
 		    }

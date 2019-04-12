@@ -6,6 +6,10 @@ public class MyEvent {
 	private String name;
 	
 	private String arg;
+	
+	private TestObject testObject;
+	
+	private Boolean hasName=false;
 
 	public String getName() {
 		return name;
@@ -22,6 +26,24 @@ public class MyEvent {
 	public void setArg(String arg) {
 		this.arg = arg;
 	}
+
+	public Boolean getHasName() {
+		return hasName;
+	}
+
+	public void setHasName(Boolean hasName) {
+		this.hasName = hasName;
+	}
+
+	public TestObject getTestObject() {
+		return testObject;
+	}
+
+	public void setTestObject(TestObject testObject) {
+		this.testObject = testObject;
+	}
+
+
 	
 
 }

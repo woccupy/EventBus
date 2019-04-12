@@ -12,6 +12,9 @@ public class Executor {
 	
 	public void execute(EventListener listener, Object event) throws Exception {
 		
+		if(listener.matchedCondition(event)==false)
+			return;
+		
 		if(listener.isThrowException()){
 			execThrowException(listener,event);
 		} else {

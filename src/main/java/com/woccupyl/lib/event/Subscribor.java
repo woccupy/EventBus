@@ -19,4 +19,6 @@ public @interface Subscribor {
 	
 	public int order() default 10;
 	
+	public String condition() default "";
+	
 }
