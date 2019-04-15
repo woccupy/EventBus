@@ -4,11 +4,14 @@ package com.woccupyl.lib.test;
 
 public class MyPublisher {
 	
+	
 	MyEventBus eventBus=MyEventBus.instance;
 	
 	
 	public void publish() throws Exception{
 		
+	
+		 boolean test = com.woccupyl.lib.test.Constant.Version > 12;
 		
 		eventBus.post(new MyEventTwo());
 	}

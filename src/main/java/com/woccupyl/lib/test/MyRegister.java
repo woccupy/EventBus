@@ -14,7 +14,9 @@ public class MyRegister {
 	}
 
 	
-	@Subscriber(order=1,condition="testObject!=null && testObject.hasEvent==true || hasName ==false")
+	@Subscriber(order=1,condition=""
+			+ "version==T(com.woccupyl.lib.test.Constant).Version "
+			+ "|| hasName ==false")
 	public void onMyEvent0(testEvent event) throws Exception{
 		
 		System.out.println("has entered the method 1  !");
